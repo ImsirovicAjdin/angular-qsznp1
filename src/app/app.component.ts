@@ -14,6 +14,18 @@ export class AppComponent  {
       err => console.log(`error occured... ${err}`),
       () => console.log(`complete`)
     );
-    
+
+    of('Pineapple', 'Appricot', 'Dragonfruit').subscribe(
+      item => console.warn(`${item}`),
+      err => console.info(`${err}`),
+      () => console.log(`complete`),
+    )
+
   }
 }
+/*
+
+Task to complete:
+Define an observable that emits three strings and subscribe with method for next(), error(), and complete()
+
+*/
